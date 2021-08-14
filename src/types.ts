@@ -96,3 +96,8 @@ export interface AggregationParams {
   date_to?: string
   filters?: Filter[]
 }
+
+export interface CurrentVisitors {
+  site_id: string
+  detailed?: boolean
+}
