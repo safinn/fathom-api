@@ -24,7 +24,8 @@
     "README.md"
   ],
   "dependencies": {
-    "isomorphic-unfetch": "^3.1.0"
+    "isomorphic-unfetch": "^3.1.0",
+    "tslib": "^1.14.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
