@@ -1,0 +1,68 @@
+{
+  "name": "fathom-api",
+  "version": "0.0.0-development",
+  "description": "JS SDK for Fathom API",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "semantic-release": "semantic-release",
+    "prepare": "husky install"
+  },
+  "author": "",
+  "license": "MIT",
+  "keywords": [
+    "sdk",
+    "fathom",
+    "js",
+    "usefathom"
+  ],
+  "files": [
+    "dist/**",
+    "LICENSE.md",
+    "package.json",
+    "package-lock.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "isomorphic-unfetch": "^3.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@types/node-fetch": "^2.5.12",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "eslint": "^7.32.0",
+    "husky": "^7.0.1",
+    "prettier": "^2.3.2",
+    "semantic-release": "^17.4.4",
+    "typescript": "^4.3.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/safinn/fathom-api.git"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
+  }
+}
